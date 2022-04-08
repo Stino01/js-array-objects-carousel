@@ -42,22 +42,22 @@ let thumbTemplate = "";
 let currentIndexActive = 0;
 
 //eseguo il ciclo for sull'array delle immagini (items) e popolo l'html delle due varibaili da stampare nei due contenitori (immagini e thumbnails)
-for (let i = 0; i < items.length; i++) {
+for (let i = 0; i < item.length; i++) {
   let classActive = "";
   if (i === currentIndexActive) {
     classActive = "active";
   }
   itemTemplate += `
   <div class="item ${classActive}">
-    <img src="${items[i]}" />
+    <img src="${item[i].image}" />
       <div class="title">
-        <h2>${title[i]}</h2>
-        <p>${text[i]}</p>
+        <h2>${item[i].title}</h2>
+        <p>${item[i].text}</p>
       </div>
   </div>`;
   thumbTemplate += `
   <div class="thumb ${classActive}">
-    <img src="${items[i]}" alt="" />
+    <img src="${item[i].image}" alt="" />
   </div>`;
 }
 //console.log(thumbTemplate);
