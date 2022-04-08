@@ -116,4 +116,10 @@ function slideUp() {
 next.addEventListener("click", slideDown);
 prev.addEventListener("click", slideUp);
 
+const btn = document.getElementById('button')
 const timer = setInterval(slideDown, 5000)
+
+btn.addEventListener('click', stopTimer)
+function stopTimer() {
+  clearInterval(timer);
+}
