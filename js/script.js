@@ -103,7 +103,7 @@ function slideUp() {
   thumbs[currentIndexActive].classList.remove("active");
   //console.log(imgs);
   if (currentIndexActive === 0) {
-    currentIndexActive = items.length - 1;
+    currentIndexActive = item.length - 1;
   } else {
     currentIndexActive--;
   }
@@ -115,3 +115,5 @@ function slideUp() {
 
 next.addEventListener("click", slideDown);
 prev.addEventListener("click", slideUp);
+
+const timer = setInterval(slideDown, 5000)
